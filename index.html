@@ -6,9 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <div class="container">
+        <!-- Music Cover -->
+        <img src="" alt="Music Cover" class="music-cover" id="musicCover">
+
+        <!-- Music Player Info -->
+        <div class="music-player">
+            <div class="music-info">
+                <!-- Music Title -->
+                <h1 class="music-title"></h1>
+                <!-- Music Singer -->
+                <small class="singer"></small>
+            </div>
+            <audio src="" hidden id="musicAudio"></audio>
+            <!-- Music Timeline and Time -->
+            <div class="timeline">
+                <span class="timeline-before music-tag">0:00</span>
+                <span class="timeline-after music-tag"></span>
+                <progress class="music-timeline" id="timeLine" max="100" value="0"></progress>
+            </div>
+
+            <!-- Music Keys Trigger -->
+            <div class="music-keys">
+                <span class="backward" title="Backward"><i class="fas fa-backward"></i></span>
+                <span class="play" title="Play"><i class="fas fa-play"></i></span>
+                <span class="pause" title="Pause" hidden><i class="fas fa-pause"></i></span>
+                <span class="forward" title="Forward"><i class="fas fa-forward"></i></span>
+            </div>
+        </div>
+    </div>
     
 
     <!-- Script JavaScript-->

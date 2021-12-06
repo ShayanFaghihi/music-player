@@ -1,0 +1,26 @@
+{
+    "tracks" : [
+        {
+            "singer" : "Billie Eilish",
+            "title" : "Lovely",
+            "cover" :  "/assets/covers/lovely.jpg",
+            "music" : "/assets/music/Billie Eilish - Lovely.mp3"
+        },{
+            "singer" : "Billie Eilish",
+            "title" : "Therefore I Am",
+            "cover" :  "/assets/covers/Therefore I Am.jpg",
+            "music" : "/assets/music/Billie Eilish - Therefore I Am.mp3"
+        },{
+            "singer" : "Jason Derulo",
+            "title" : "Savage Love",
+            "cover" :  "/assets/covers/Savage Love.jpg",
+            "music" : "/assets/music/Jason Derulo - Savage Love.mp3"
+        },
+        {
+            "singer" : "Camila Cabello",
+            "title" : "Havana",
+            "cover" :  "/assets/covers/Havana.jpg",
+            "music" : "/assets/music/Camila Cabello feat. Young Thug - Havana.mp3"
+        }
+    ]
+}
