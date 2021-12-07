@@ -40,8 +40,13 @@ function showTrack(data) {
     musicAudio.setAttribute('src',data.tracks[i].music);
     // After 100ms loads the music duration / in minute and 2-decimal second
     setTimeout(()=> {
-        durationTag.textContent = ((musicAudio.duration)/60).toFixed(2);
-    }, 100)
+        const minute = Math.floor((musicAudio.duration)/60);
+        let second = Math.floor((musicAudio.duration) % 60);
+        if(second < 10) {
+            second = `0${second}`;
+        }
+        durationTag.textContent = `${minute}:${second}`;
+    }, 500)
 }
 
 // Loads music data as soon as the page loads
@@ -97,7 +102,12 @@ function changeTimeline() {
         const valueInPercent = (timelineValue * 100) / audioDuration;
         timeline.setAttribute('value', valueInPercent);
         // Change current track time in minute and 2-decimal second
-        currentTag.textContent = (timelineValue/60).toFixed(2);
+        const minute = Math.floor(timelineValue/60)
+        let second = Math.floor(timelineValue % 60);
+        if(second < 10) {
+            second = `0${second}`
+        }
+        currentTag.textContent = `${minute}:${second}`
 
         // Go to next track when it is completed
         if(timelineValue == audioDuration) {
