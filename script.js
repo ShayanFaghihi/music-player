@@ -38,21 +38,22 @@ function showTrack(data) {
     musicTitle.textContent = data.tracks[i].title;
     singer.textContent = data.tracks[i].singer;
     musicAudio.setAttribute('src',data.tracks[i].music);
-    // After 100ms loads the music duration / in minute and 2-decimal second
-    setTimeout(()=> {
-        const minute = Math.floor((musicAudio.duration)/60);
-        let second = Math.floor((musicAudio.duration) % 60);
-        if(second < 10) {
-            second = `0${second}`;
-        }
-        durationTag.textContent = `${minute}:${second}`;
-    }, 500)
+
 }
 
 // Loads music data as soon as the page loads
 getMusicTracks();
 
 
+  // music duration / in minute and 2-decimal second
+musicAudio.addEventListener('loadeddata', () => {
+    const minute = Math.floor((musicAudio.duration)/60);
+    let second = Math.floor((musicAudio.duration) % 60);
+    if(second < 10) {
+        second = `0${second}`;
+    }
+    durationTag.textContent = `${minute}:${second}`;
+})
 
 // Play Event Handler
 playBtn.addEventListener('click',playMusic)
